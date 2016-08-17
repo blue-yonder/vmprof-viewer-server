@@ -1,0 +1,35 @@
+diff --git a/server/static/details.html b/server/static/details.html
+index 9c6be08..f94c61e 100644
+--- a/server/static/details.html
++++ b/server/static/details.html
+@@ -8,11 +8,11 @@
+ 
+     <ol class="breadcrumb">
+         <li>
+-            <a ng-href="/#/{{ log.checksum }}/?view={{ visualization }}">{{ log.data.argv }}</a>
++            <a ng-href="#/{{ log.checksum }}/?view={{ visualization }}">{{ log.data.argv }}</a>
+             <span ng-if="name">: {{ name }}</span>
+         </li>
+         <li ng-repeat="path in paths">
+-            <a ng-href="/#/{{ log.checksum }}/?view={{ visualization }}&id={{ path.path }}">
++            <a ng-href="#/{{ log.checksum }}/?view={{ visualization }}&id={{ path.path }}">
+                 {{ path.name }} {{ "(" + (path.percentage * 100).toFixed(2) + "%)" }}
+             </a>
+         </li>
+diff --git a/server/static/main.js b/server/static/main.js
+index 9c25f02..6d77fdc 100644
+--- a/server/static/main.js
++++ b/server/static/main.js
+@@ -91,12 +91,6 @@ app.factory('AuthInterceptor', function ($rootScope, $q, $location, $cookies) {
+     };
+ });
+ 
+-app.filter('ago', function() {
+-    return function(input) {
+-        return moment.utc(input, 'YYYY-MM-DD HH:mm:ss').fromNow();
+-    };
+-});
+-
+ app.controller('main', function ($scope, $cookies, $location, $http, AuthService) {
+     $scope.user = $cookies.user ? JSON.parse($cookies.user) : null;
+ 

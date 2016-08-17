@@ -1,0 +1,3 @@
+recursive-include profiles/templates *
+recursive-include vmprof_viewer/templates *
+recursive-include vmprof_viewer/collected-static *

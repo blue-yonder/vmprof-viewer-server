@@ -1,0 +1,4 @@
+vmprof
+django>=1.9
+msgpack-python
+pandas
