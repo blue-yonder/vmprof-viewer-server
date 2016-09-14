@@ -1,6 +1,6 @@
 # vmprof-viewer server
 
-For vmprof-viewer usage instructions, see https://github.com/jonashaag/vmprof-viewer-client.
+For vmprof-viewer usage instructions, see https://github.com/blue-yonder/vmprof-viewer-client.
 
 To get the vmprof-viewer server running, follow a standard Django deployment:
 
