@@ -6,8 +6,8 @@ To get the vmprof-viewer server running, follow a standard Django deployment:
 
 ```sh
 # Clone repo
-git clone git+https://github.com/jonashaag/vmprof-viewer
-cd vmprof-viewer
+git clone git+https://github.com/blue-yonder/vmprof-viewer-server
+cd vmprof-viewer-server
 git submodule update --init
 
 # Apply our vmprof-server patch
