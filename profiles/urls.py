@@ -3,7 +3,6 @@ from . import views, models
 
 urlpatterns = [
     url(r'^submit/$', views.submit_profile, name='submit_profile'),
-    #url(r'^(?P<pk>[0-9]+)/cpu/$', views.show_cpu_profile, name='cpu_profile'),
     url(r'^(?P<pk>[0-9]+)/mem/$', views.show_profile, {'profile_type': "mem"}, name='mem_profile'),
     url(r'^(?P<pk>[0-9]+)/cpu/$', views.show_profile, {'profile_type': "cpu"}, name='cpu_profile'),
     url(r'^api/(?P<pk>[0-9]+)/cpu/$',  views.fetch_profile, {'attr': "cpu_profile"}, name='api_fetch_cpu'),
